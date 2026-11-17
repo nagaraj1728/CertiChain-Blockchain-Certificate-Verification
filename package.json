@@ -1,0 +1,26 @@
+{
+  "name": "blockchain-certificate-verification",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Blockchain-based educational certificate authentication using SHA-256, Solidity, and optional IPFS storage.",
+  "scripts": {
+    "chain": "hardhat node",
+    "compile": "hardhat compile",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "test:contract": "hardhat test",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently -k \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
+    "chai": "^4.5.0",
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.17"
+  },
+  "dependencies": {
+    "ethers": "^6.13.5"
+  }
+}
